@@ -1,0 +1,468 @@
+/* =========================================================
+   Diseno.css - Personalización sobre Bulma
+   Orden: 1) Variables  2) Base  3) Navegación  4) Encabezado
+          5) Secciones y tarjetas  6) Habilidades  7) Proyectos
+          8) Trayectoria y enlaces  9) Pie  10) Textos editables
+   ========================================================= */
+
+/* 1) VARIABLES ------------------------------------------- */
+:root {
+  --color-tinta: #0b1215;          /* negro mate con matiz verde */
+  --color-tinta-2: #0e3b3b;        /* verde azulado oscuro (final del degradado) */
+  --color-fondo: #faf8f5;          /* crema */
+  --color-tarjeta: #ffffff;
+  --color-borde: #e7e5e4;
+  --color-primario: #14b88a;       /* verde menta */
+  --color-destacado: #3fd8b4;      /* menta claro (hover) */
+  --color-naranja: #2DD4A7;        /* botón Contacto */
+  --color-naranja-hover: #a3eba9;
+  --color-texto: #44403c;
+  --color-titulo: #1c1917;
+  --color-suave: #d6d3d1;
+  --sombra: 0 6px 18px rgba(11, 18, 21, 0.08);
+
+  --fuente-titulos: "Sora", sans-serif;
+  --fuente-texto: "DM Sans", sans-serif;
+
+  /* Color primario de Bulma (verde menta #14b88a) */
+  --bulma-primary-h: 163deg;
+  --bulma-primary-s: 80%;
+  --bulma-primary-l: 40%;
+}
+
+/* 2) BASE ------------------------------------------------ */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4rem;
+}
+
+body {
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-texto);
+  font-size: 1.05rem;
+}
+
+.title {
+  font-family: var(--fuente-titulos);
+  color: var(--color-titulo);
+}
+
+/* Botones (reemplazan el amarillo de is-warning) */
+.button.is-warning {
+  background: var(--color-primario);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+.button.is-warning:hover {
+  background: var(--color-destacado);
+  color: var(--color-tinta);
+}
+
+.button.is-light.is-outlined {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+}
+
+.button.is-light.is-outlined:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+  color: var(--color-tinta);
+}
+
+/* 3) NAVEGACIÓN ------------------------------------------ */
+.barra,
+.barra .navbar-menu {
+  background: var(--color-tinta);
+}
+
+.barra .navbar-item,
+.barra .navbar-burger {
+  color: #ffffff;
+}
+
+.barra a.navbar-item:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-destacado);
+}
+
+.marca {
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+}
+
+/* Botón "Contacto" del menú */
+.barra .button.is-warning {
+  background: var(--color-naranja);
+  color: var(--color-tinta);
+}
+
+.barra .button.is-warning:hover {
+  background: var(--color-naranja-hover);
+  color: var(--color-tinta);
+}
+/* 4) ENCABEZADO ------------------------------------------ */
+.encabezado {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 80% 45%, rgba(20, 184, 138, 0.13), transparent 35%),
+    linear-gradient(135deg, #0b1215 0%, #0e3b3b 100%);
+  border-bottom: 4px solid var(--color-primario);
+}
+
+.encabezado .hero-body {
+  padding: 3rem 1.5rem;
+}
+
+.encabezado .columns {
+  min-height: 16rem;
+}
+
+.encabezado .title {
+  color: #ffffff;
+  font-size: clamp(2.8rem, 5vw, 4.3rem);
+  letter-spacing: -0.045em;
+  margin-bottom: 0.7rem;
+}
+
+.encabezado .subtitle {
+  color: var(--color-primario);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.ubicacion {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #d6d3d1;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.65rem 1rem;
+  border-radius: 30px;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ubicacion i {
+  color: var(--color-primario);
+}
+
+/* Avatar con subida de foto */
+.avatar-contenedor {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  border: 4px solid var(--color-primario);
+  background: linear-gradient(145deg, #101b1e, #0b1215);
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow:
+    0 0 0 8px rgba(20, 184, 138, 0.08),
+    0 12px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avatar-contenedor:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 0 10px rgba(20, 184, 138, 0.12),
+    0 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #ffffff;
+  font-family: var(--fuente-titulos);
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.avatar-foto {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa para cambiar la fotografía */
+.avatar-capa {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+  padding-bottom: 18px;
+  background: linear-gradient(
+    to top,
+    rgba(11, 18, 21, 0.9) 0%,
+    rgba(11, 18, 21, 0) 65%
+  );
+  color: #ffffff;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.avatar-capa i {
+  font-size: 1.3rem;
+}
+
+.avatar-contenedor:hover .avatar-capa,
+.avatar-contenedor:focus-visible .avatar-capa {
+  opacity: 1;
+}
+
+/* Adaptación para celulares */
+@media screen and (max-width: 768px) {
+  .encabezado .hero-body {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .encabezado .columns {
+    min-height: auto;
+  }
+
+  .encabezado .column {
+    text-align: center;
+  }
+
+  .encabezado .title {
+    font-size: 2.6rem;
+  }
+
+  .encabezado .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .avatar-contenedor {
+    width: 155px;
+    height: 155px;
+  }
+}
+
+/* 5) SECCIONES Y TARJETAS -------------------------------- */
+.principal {
+  padding: 2rem 1.5rem;
+}
+
+.caja,
+.tarjeta {
+  background: var(--color-tarjeta);
+  color: var(--color-texto);
+  box-shadow: var(--sombra);
+  border-radius: 16px;
+}
+
+.caja {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.caja .caja-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+  color: var(--color-titulo);
+}
+
+.caja .caja-titulo i {
+  color: var(--color-primario);
+}
+
+/* Título de "Proyectos" sin tarjeta propia */
+.titulo-suelto {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.5rem !important;
+}
+
+.titulo-suelto i {
+  color: var(--color-primario);
+}
+
+.texto-presentacion {
+  line-height: 1.7;
+}
+
+/* 6) HABILIDADES ----------------------------------------- */
+.grupo {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-titulo);
+  margin-bottom: 0.5rem;
+}
+
+.tag.etiqueta {
+  background: rgba(20, 184, 138, 0.12);
+  color: #0b7a5c;
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+/* 7) PROYECTOS ------------------------------------------- */
+.tarjeta {
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.tarjeta:hover {
+  transform: translateY(-4px);
+}
+
+.tarjeta .title {
+  color: var(--color-titulo);
+}
+
+.tarjeta-imagen {
+  display: grid;
+  place-items: center;
+  height: 120px;
+  font-size: 2.5rem;
+  color: var(--color-primario);
+  background: linear-gradient(135deg, var(--color-tinta) 0%, var(--color-tinta-2) 100%);
+}
+
+/* 8) TRAYECTORIA Y ENLACES ------------------------------- */
+.item {
+  display: flex;
+  gap: 0.9rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.item-icono {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(20, 184, 138, 0.12);
+  color: var(--color-primario);
+}
+
+.fecha {
+  font-size: 0.8rem;
+  color: #78716c;
+}
+
+.enlaces {
+  padding: 0;
+  overflow: hidden;
+}
+
+.enlaces .caja-titulo {
+  margin: 0;
+  padding: 1rem 1.5rem;
+  background: var(--color-tinta);
+  color: #ffffff;
+}
+
+.enlaces .caja-titulo i {
+  color: var(--color-destacado);
+}
+
+.enlaces a {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.8rem 1.5rem;
+  color: var(--color-texto);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.enlaces a:last-child {
+  border-bottom: none;
+}
+
+.enlaces a:hover {
+  color: var(--color-primario);
+}
+
+/* 9) PIE DE PÁGINA --------------------------------------- */
+.pie {
+  background: var(--color-tinta);
+  color: var(--color-suave);
+  margin-top: 2rem;
+}
+
+.pie .title {
+  color: #ffffff;
+}
+
+.pie a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.pie a:hover {
+  color: var(--color-destacado);
+}
+
+.titulo-contacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.icono-sobre {
+  color: var(--color-primario);
+}
+
+/* 10) TEXTOS EDITABLES ----------------------------------- */
+.editable {
+  cursor: text;
+  border-radius: 6px;
+  outline: 2px dashed transparent;
+  outline-offset: 3px;
+  transition: outline-color 0.15s;
+}
+
+.editable:hover {
+  outline-color: rgba(20, 184, 138, 0.45);
+}
+
+.editable:focus {
+  outline: 2px solid var(--color-primario);
+}
+
+.encabezado .editable:hover {
+  outline-color: rgba(255, 255, 255, 0.4);
+}
+
+.encabezado .editable:focus,
+.pie .editable:focus {
+  outline-color: var(--color-destacado);
+}
+
+.contador {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 50;
+}

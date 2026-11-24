@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light" class="has-navbar-fixed-top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi portafolio</title>
+
+  <!-- Tipografias -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Iconos (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Bulma y estilos propios (en este orden) -->
+  <link rel="stylesheet" href="bulma.min.css">
+  <link rel="stylesheet" href="Diseno.css">
+</head>
+<body>
+
+  <!-- Barra de navegacion -->
+  <nav class="barra navbar is-fixed-top" aria-label="Navegación principal">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item marca" id="marca" href="#inicio">Tu Nombre.</a>
+        <a role="button" class="navbar-burger" data-target="menu" aria-label="Abrir menú" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="menu" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="#sobre-mi">Sobre mí</a>
+          <a class="navbar-item" href="#habilidades">Habilidades</a>
+          <a class="navbar-item" href="#proyectos">Proyectos</a>
+          <a class="navbar-item" href="#formacion">Trayectoria</a>
+          <div class="navbar-item">
+            <a class="button is-warning is-rounded" href="#contacto">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Nombre y profesión -->
+  <header id="inicio" class="encabezado hero is-medium">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column is-three-fifths">
+            <h1 class="title is-1 editable" id="nombre">Tu Nombre.</h1>
+            <p class="subtitle is-4 editable">Tu Profesión.</p>
+            <p class="ubicacion"><i class="fa-solid fa-location-dot"></i> <span class="editable">Tu ciudad</span></p>
+            <div class="buttons">
+          </div>
+          </div>
+          <div class="column has-text-centered">
+            <div class="avatar-contenedor" id="avatar" role="button" tabindex="0" aria-label="Cambiar foto de perfil">
+              <div class="avatar" id="iniciales">TN</div>
+              <img class="avatar-foto" id="foto" alt="Foto de perfil" hidden>
+              <div class="avatar-capa">
+                <i class="fa-solid fa-camera"></i>
+                <span>Agregar foto</span>
+              </div>
+              <input type="file" id="archivo" accept="image/*" hidden>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container principal">
+    <div class="columns">
+
+      <!-- Columna izquierda -->
+      <div class="column is-two-thirds">
+
+        <!-- Presentación -->
+        <section id="sobre-mi" class="caja">
+          <h2 class="title is-5 caja-titulo"><i class="fa-regular fa-user"></i> Sobre mí</h2>
+          <p class="texto-presentacion editable">Escribe aquí una breve presentación sobre ti.</p>
+        </section>
+
+        <!-- Habilidades -->
+        <section id="habilidades" class="caja">
+          <h2 class="title is-5 caja-titulo"><i class="fa-solid fa-bolt"></i> Habilidades</h2>
+          <div class="columns is-mobile is-multiline">
+            <div class="column is-full-mobile is-one-third-tablet">
+              <p class="grupo">Lenguajes</p>
+              <div class="tags">
+                <span class="tag etiqueta editable">Habilidad 1</span>
+                <span class="tag etiqueta editable">Habilidad 2</span>
+              </div>
+            </div>
+            <div class="column is-full-mobile is-one-third-tablet">
+              <p class="grupo">Aprendizaje</p>
+              <div class="tags">
+                <span class="tag etiqueta editable">Habilidad 3</span>
+                <span class="tag etiqueta editable">Habilidad 4</span>
+              </div>
+            </div>
+            <div class="column is-full-mobile is-one-third-tablet">
+              <p class="grupo">Herramientas</p>
+              <div class="tags">
+                <span class="tag etiqueta editable">Habilidad 5</span>
+                <span class="tag etiqueta editable">Habilidad 6</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Proyectos -->
+        <section id="proyectos">
+          <h2 class="title is-5 caja-titulo titulo-suelto"><i class="fa-solid fa-diagram-project"></i> Proyectos</h2>
+          <div class="columns is-multiline">
+            <div class="column is-half">
+              <div class="tarjeta card">
+                <div class="tarjeta-imagen"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="card-content">
+                  <h3 class="title is-5 editable">Nombre del proyecto</h3>
+                  <p class="editable">Descripción breve del proyecto.</p>
+                  <div class="tags mt-3">
+                    <span class="tag etiqueta editable">Lenguaje</span>
+                    <span class="tag etiqueta editable">Lenguaje</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="column is-half">
+              <div class="tarjeta card">
+                <div class="tarjeta-imagen"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="card-content">
+                  <h3 class="title is-5 editable">Nombre del proyecto</h3>
+                  <p class="editable">Descripción breve del proyecto.</p>
+                  <div class="tags mt-3">
+                    <span class="tag etiqueta editable">Lenguaje</span>
+                    <span class="tag etiqueta editable">Lenguaje</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Columna derecha -->
+      <aside class="column">
+
+        <!-- Estudios y experiencia -->
+        <section id="formacion" class="caja">
+          <h2 class="title is-5 caja-titulo"><i class="fa-solid fa-route"></i> Recorrido</h2>
+          <div class="item">
+            <span class="item-icono"><i class="fa-solid fa-graduation-cap"></i></span>
+            <div>
+              <p class="has-text-weight-semibold editable">Nombre del programa.</p>
+              <p class="editable">Institución.</p>
+              <p class="fecha editable">Desde 2024</p>
+            </div>
+          </div>
+          <div class="item">
+            <span class="item-icono"><i class="fa-solid fa-briefcase"></i></span>
+            <div>
+              <p class="has-text-weight-semibold editable">Cargo o experiencia.</p>
+              <p class="editable">Empresa.</p>
+              <p class="fecha editable">2025 – 2026</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Enlaces -->
+        <section class="caja enlaces">
+          <h2 class="title is-5 caja-titulo"><i class="fa-solid fa-link"></i> Enlaces</h2>
+          <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        </section>
+
+      </aside>
+    </div>
+  </main>
+
+  <!-- Contacto -->
+  <footer id="contacto" class="pie footer">
+    <div class="container has-text-centered">
+      <p class="title is-4 titulo-contacto">
+        <i class="fa-regular fa-envelope icono-sobre"></i> Escríbeme
+      </p>
+      <p><a href="mailto:johan.barona@utp.edu.co">johan.barona@utp.edu.co</a></p>
+      <p>
+        <a href="https://www.google.com/maps/search/?api=1&query=Carrera+4+%2334-19,+Pereira,+Risaralda"
+           target="_blank" rel="noopener noreferrer">Carrera 4 #34-19</a>
+      </p>
+      <p><a href="tel:+573127531396">3127531396</a></p>
+    </div>
+  </footer>
+
+  <!-- Contador de caracteres -->
+  <div id="contador" class="contador tag is-medium is-dark" role="status">
+    Haz clic en un texto para editarlo (máx. 50)
+  </div>
+
+  <script>
+    /* ---------- Menú móvil ---------- */
+    const burger = document.querySelector(".navbar-burger");
+    const menu = document.getElementById("menu");
+    burger.addEventListener("click", () => {
+      const abierto = burger.classList.toggle("is-active");
+      menu.classList.toggle("is-active");
+      burger.setAttribute("aria-expanded", abierto);
+    });
+
+    /* ---------- Textos editables (máx. 50 caracteres) ---------- */
+    const LIMITE = 50;
+    const MENSAJE_INICIAL = "Haz clic en un texto para editarlo (máx. 50)";
+    const contador = document.getElementById("contador");
+    const marca = document.getElementById("marca");
+    const iniciales = document.getElementById("iniciales");
+
+    // Ubica el cursor al final del texto
+    function cursorAlFinal(el) {
+      const rango = document.createRange();
+      rango.selectNodeContents(el);
+      rango.collapse(false);
+      const seleccion = window.getSelection();
+      seleccion.removeAllRanges();
+      seleccion.addRange(rango);
+    }
+
+    // Muestra "n/50" y lo pone rojo al llegar al límite
+    function actualizarContador(el) {
+      const n = el.textContent.length;
+      contador.textContent = n + "/" + LIMITE;
+      contador.classList.toggle("is-danger", n >= LIMITE);
+      contador.classList.toggle("is-dark", n < LIMITE);
+    }
+
+    // El nombre actualiza el menú y las iniciales del círculo
+    function sincronizarNombre() {
+      const nombre = document.getElementById("nombre").textContent;
+      marca.textContent = nombre;
+      const letras = nombre.replace(/[^\p{L}\s]/gu, "").trim().split(/\s+/);
+      iniciales.textContent = letras.slice(0, 2).map(p => p[0]).join("").toUpperCase() || "?";
+    }
+
+    document.querySelectorAll(".editable").forEach(el => {
+      el.contentEditable = "true";
+      el.spellcheck = false;
+      el.dataset.original = el.textContent;   // para restaurar si queda vacío
+
+      // Al entrar al texto, se selecciona todo para escribir encima
+      let recienEnfocado = false;
+
+      el.addEventListener("focus", () => {
+        actualizarContador(el);
+        recienEnfocado = true;
+        setTimeout(() => {
+          window.getSelection().selectAllChildren(el);
+        }, 0);
+      });
+
+      // Evita que el clic deshaga la selección justo al entrar
+      el.addEventListener("mouseup", e => {
+        if (recienEnfocado) {
+          e.preventDefault();
+          recienEnfocado = false;
+        }
+      });
+
+      // Enter termina la edición (no se permiten saltos de línea)
+      el.addEventListener("keydown", e => {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          el.blur();
+        }
+      });
+
+      // Si se pasa del límite (al escribir o pegar), se recorta
+      el.addEventListener("input", () => {
+        if (el.textContent.length > LIMITE) {
+          el.textContent = el.textContent.slice(0, LIMITE);
+          cursorAlFinal(el);
+        }
+        actualizarContador(el);
+        if (el.id === "nombre") sincronizarNombre();
+      });
+
+      // Si queda vacío, vuelve al texto original
+      el.addEventListener("blur", () => {
+        if (el.textContent.trim() === "") {
+          el.textContent = el.dataset.original;
+          if (el.id === "nombre") sincronizarNombre();
+        }
+        contador.textContent = MENSAJE_INICIAL;
+        contador.classList.remove("is-danger");
+        contador.classList.add("is-dark");
+      });
+    });
+
+    /* ---------- Foto de perfil ---------- */
+    const avatar = document.getElementById("avatar");
+    const archivo = document.getElementById("archivo");
+    const foto = document.getElementById("foto");
+    const textoCapa = document.querySelector(".avatar-capa span");
+
+    avatar.addEventListener("click", () => archivo.click());
+
+    avatar.addEventListener("keydown", e => {
+      if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        archivo.click();
+      }
+    });
+
+    archivo.addEventListener("change", () => {
+      const imagen = archivo.files[0];
+      if (!imagen) return;
+
+      if (!imagen.type.startsWith("image/")) {
+        alert("Por favor elige un archivo de imagen.");
+        return;
+      }
+
+      const lector = new FileReader();
+      lector.onload = () => {
+        foto.src = lector.result;
+        foto.hidden = false;
+        iniciales.hidden = true;
+        textoCapa.textContent = "Cambiar foto";
+      };
+      lector.readAsDataURL(imagen);
+    });
+  </script>
+</body>
+</html>
